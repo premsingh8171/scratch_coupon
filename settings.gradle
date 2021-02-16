@@ -1,0 +1,3 @@
+include ':ScratchCoupon'
+include ':app'
+rootProject.name = "ScratchCouponDemo"
