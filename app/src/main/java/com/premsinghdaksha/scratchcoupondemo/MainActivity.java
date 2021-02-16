@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
             public void onScratch(ScratchCardView scratchCard, float visiblePercent) {
                 if (visiblePercent > 0.7) {
                     scratchCard.setVisibility(View.GONE);
-                    Toast.makeText(MainActivity.this, "YOU EARNED 20", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "" + getString(R.string.rupee_20), Toast.LENGTH_SHORT).show();
                 }
             }
         });
