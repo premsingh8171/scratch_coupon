@@ -13,6 +13,7 @@ Create Google Pay,phone pay and paytm  like scratch card
 dependencies {
 
 	 	        implementation 'com.github.premsingh8171:scratch_coupon:1.0.0'
+			
 }
 ```
 
@@ -24,6 +25,27 @@ allprojects {
 			maven { url 'https://jitpack.io' }
 		}
 	}
+```
+
+```xml
+  <com.premsinghdaksha.scratchcoupon.ScratchCardView
+                android:id="@+id/scratchCardView"
+                android:layout_width="180dp"
+                android:layout_height="200dp"
+                android:layout_centerInParent="true"
+                app:scratchDrawable="@drawable/scratch" />
+```
+
+```java
+scratchCardView.setOnScratchListener(new ScratchCardView.OnScratchListener() {
+            @Override
+            public void onScratch(ScratchCardView scratchCard, float visiblePercent) {
+                if (visiblePercent > 0.7) {
+                    scratchCard.setVisibility(View.GONE);
+                    Toast.makeText(MainActivity.this, "" + getString(R.string.rupee_20), Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
 ```
 
 
